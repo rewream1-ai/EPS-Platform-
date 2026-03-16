@@ -1,0 +1,59 @@
+{
+  "name": "eps-platform",
+  "version": "5.0.0",
+  "description": "EPS Platform — منصة التربية البدنية والرياضية",
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "build:all": "electron-builder -mwl",
+    "cap:init": "npx cap init",
+    "cap:android": "npx cap add android && npx cap sync",
+    "cap:open-android": "npx cap open android"
+  },
+  "build": {
+    "appId": "com.eps.platform",
+    "productName": "EPS Platform",
+    "directories": {
+      "output": "dist-electron"
+    },
+    "files": [
+      "index.html",
+      "manifest.json",
+      "sw.js",
+      "icons/**",
+      "electron/**"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "icons/icon-256x256.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icons/icon-512x512.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "icons/icon-512x512.png"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "icons/icon-256x256.ico",
+      "installerLanguages": ["ar", "fr", "en"]
+    }
+  },
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.0.0",
+    "@capacitor/core": "^6.0.0"
+  },
+  "keywords": ["education", "eps", "sport", "pwa", "arabic"],
+  "license": "MIT",
+  "author": "EPS Platform Team"
+}

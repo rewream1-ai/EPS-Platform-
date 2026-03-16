@@ -1,0 +1,27 @@
+{
+  "appId": "com.eps.platform",
+  "appName": "EPSPlatform",
+  "webDir": ".",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https",
+    "hostname": "eps.platform.app"
+  },
+  "android": {
+    "buildOptions": {
+      "keystorePath": "android/app/eps-platform-release.jks",
+      "keystoreAlias": "eps-platform"
+    },
+    "allowMixedContent": false,
+    "backgroundColor": "#f0f4ff"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 2000,
+      "launchAutoHide": true,
+      "backgroundColor": "#f0f4ff",
+      "androidSplashResourceName": "splash",
+      "showSpinner": false
+    }
+  }
+}

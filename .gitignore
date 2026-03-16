@@ -1,0 +1,12 @@
+node_modules/
+dist-electron/
+dist/
+android/
+ios/
+.capacitor/
+*.log
+*.local
+.DS_Store
+Thumbs.db
+.env
+.env.local
